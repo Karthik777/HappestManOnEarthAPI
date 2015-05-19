@@ -1,0 +1,53 @@
+---
+- hosts: webservers
+  sudo: yes
+  tasks:
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
+    
+    - name: install nginx
+      apt: name=nginx update_cache=yes state=latest
+
+    - name: install python-dev python-pip
+      apt: name=python-dev update_cache=yes state=latest
+    - name: install python-pip
+      apt: name=python-pip update_cache=yes state=latest
+
+    - name: install clients
+      apt: name={{ item }} update_cache=yes state=latest
+      with_items:
+          - python-novaclient
+          - python-swiftclient
+          - python-cinderclient
+          - python-keystoneclient
+
+    - name: install couchdb
+      apt: name=couchdb update_cache=yes state=latest
+
+    - easy_install: name=pip 
+
+    - pip: name=flask
+    - pip: name=tweetpy
+    - pip: name=unirest
+    - pip: name=mpi4py
+
+    - name: install node
+      apt: name=nodejs update_cache=yes
+
+    - name: install npm
+      apt: name=npm update_cache=yes
+
+    - name: install ansile
+      apt: name=ansible update_cache=yes
+
+    - name: Copy crawler
+      copy: src=/home/ubuntu/crawler dest=/home/ubuntu/crawler
+
+    - name: Copy Analyser
+      copy: src=/home/ubuntu/Analyser dest=/home/ubuntu/Analyser
+
+    - name: Copy statistics
+      copy: src=/home/ubuntu/statistics dest=/home/ubuntu/statistics
+
+    - name: install screen
+      apt: name=screen 
