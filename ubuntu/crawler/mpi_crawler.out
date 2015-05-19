@@ -1,0 +1,14 @@
+Number of tokens: 4
+rank: 1  hostname: server-fa7815b8-97ca-4b56-83aa-d29a4af3b7da starts Streaming Search
+Number of tokens: 4
+rank: 0  hostname: twitterinstance1 starts Historical Search
+Number of tokens: 4
+rank: 2  hostname: server-b246b1e0-f0b6-432b-88dd-04d3101dab54 starts Streaming Search
+Number of tokens: 4
+rank: 3  hostname: server-caf2c148-136f-460f-bc02-d658d3e74d30 starts Streaming Search
+/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
