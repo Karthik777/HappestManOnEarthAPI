@@ -113,7 +113,11 @@ def storeFriendsTimeline(pages, db):
 
 def startHistoricalSearch(db_addr, db_name, auth):
     couch_server = couchdb.Server(db_addr)
-    db = couch_server[db_name]
+    db = None
+    try:
+        db = couch_server[db_name]
+    except:
+        db = couch_server.create(db_name)
 
     while True:
         # time spent on retrieval
@@ -180,7 +184,12 @@ class StreamCrawler(tweepy.StreamListener):
 
 def startStreamingSearch(db_addr, db_name, location_pos, auth):
     couch_server = couchdb.Server(db_addr)
-    db = couch_server[db_name]
+    #db = couch_server[db_name]
+    db = None
+    try:
+        db = couch_server[db_name]
+    except:
+        db = couch_server.create(db_name)
     
     stream_listener = StreamCrawler(auth, db)
     stream = tweepy.Stream(auth, stream_listener)
